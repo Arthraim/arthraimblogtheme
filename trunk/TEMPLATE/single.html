@@ -15,8 +15,6 @@
 
 	<link rel="alternate" type="application/rss+xml" href="<#ZC_BLOG_HOST#>rss.xml" title="<#ZC_BLOG_TITLE#>" />
 	<script language="JavaScript" src="<#ZC_BLOG_HOST#>script/common.js" type="text/javascript"></script>
-    <script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/util.js"></script> 
-	<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/menu.js"></script>
 	<script language="JavaScript" type="text/javascript">
 		var str00="<#ZC_BLOG_HOST#>";
 		var str01="<#ZC_MSG033#>";
@@ -109,7 +107,13 @@
             <a id="feedemail" title="Subscribe to this blog..." href="<#ZC_BLOG_HOST#>feed.asp?cmt">Comments feed</a> 
 						<div class="fixed"></div> 
 		</div> 
-	</div> 
+	</div>
+    
+    <!-- calendar -->
+    <div class="widget widget_calendar" id="divCalendar">
+		<h3>Calendar</h3>
+        <div><#CACHE_INCLUDE_CALENDAR#></div>
+    </div> 
     
 	<!-- categories -->
 	<div class="widget widget_categories">
@@ -228,7 +232,8 @@ catch(e){};
         }
 });
 </script>
-
+<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/util.js"></script> 
+<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/menu.js"></script>
 
 </body>
 </html>
