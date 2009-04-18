@@ -89,18 +89,6 @@
 <div id="northsidebar" class="sidebar">
 
 	<!-- feeds -->
-    <!--
-    <div class="widget widget_feeds">
-		<div class="content">
-			<div id="subscribe">
-				<a id="feedrss" title="Subscribe to this blog..." href="http://feed.arthraim.cn/">RSS feed</a>
-				
-			</div>
-			<a id="feedemail" title="Subscribe to this blog..." href="<#ZC_BLOG_HOST#>feed.asp?cmt">Comments feed</a>
-						<div class="fixed"></div>
-		</div>
-	</div>
-    -->
     <div class="widget widget_feeds"> 
 		<div class="content"> 
 			<div id="subscribe"> 
@@ -119,17 +107,15 @@
             <a id="feedemail" title="Subscribe to this blog..." href="<#ZC_BLOG_HOST#>feed.asp?cmt">Comments feed</a> 
 						<div class="fixed"></div> 
 		</div> 
-	</div> <!-- my code end-->
+	</div> 
     
-	<!-- showcase -->
-	
-	<div class="widget widget_calendar" id="divCalendar">
+	<!-- calendar -->
+    <div class="widget widget_calendar" id="divCalendar">
 		<h3>Calendar</h3>
         <div><#CACHE_INCLUDE_CALENDAR_NOW#></div>
     </div>
 
-	<!-- posts -->
-	
+	<!-- categories -->
 	<div class="widget widget_categories">
 		<h3>Previous</h3>
 		<ul>
@@ -137,15 +123,13 @@
 		</ul>
 	</div>
 
-	<!-- recent comments -->
-	
 	<!-- tag cloud -->
-			<div id="tag_cloud" class="widget">
-			<h3>Comments</h3>
-			<ul>
-				<#CACHE_INCLUDE_COMMENTS#>
-			</ul>
-			</div>
+	<div id="tag_cloud" class="widget">
+		<h3>Comments</h3>
+		<ul>
+			<#CACHE_INCLUDE_COMMENTS#>
+		</ul>
+	</div>
 	
 </div>
 <!-- sidebar north END -->
