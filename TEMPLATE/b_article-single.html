@@ -1,0 +1,44 @@
+﻿<div class="post cate<#article/category/id#> auth<#article/author/id#>">
+	<div class="post">
+	<div>
+		<div style="float:left"><#template:article_navbar_l#></div>
+		<div style="float:right"><#template:article_navbar_r#></div>
+	</div>
+	<br><br>
+	<h2><a href="<#article/url#>"><#article/title#></a></h2>
+		<div class="info">
+			<span class="date"><#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#> | tags  <#template:article_tag#> | views <span id="spn<#article/id#>"></span>
+                <script language="JavaScript" type="text/javascript">strBatchCount+="spn<#article/id#>=<#article/id#>,"</script>
+</span>
+			<div class="act">
+			<span class="comments"><span>Comments <#article/commnums#></span></span>
+			<div class="fixed"></div>
+			</div>
+			<div class="fixed"></div>
+			</div>
+			<div class="content">
+				<#article/content#>
+			<p class="under">
+			</p>
+			<div class="fixed"></div>
+		</div>
+	</div>
+</div>
+
+<p><br />
+<ul class="msg mutuality">
+	<#ZC_MSG231#>:
+	<li class="msgarticle"><#template:article_mutuality#></li>
+</ul>
+<p></p>
+
+<#template:article_trackback#>
+
+<p><br />
+<#template:article_comment#>
+<P></p>
+<p></p>
+
+<p><br />
+	<#template:article_commentpost#>
+<p></p>
