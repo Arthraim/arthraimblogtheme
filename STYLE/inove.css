@@ -622,6 +622,12 @@ span.feed-icon{display:none;}
 #subscribe li#inezha_reader a span {
 	background-position:0 -140px;
 }
+#subscribe li#qq_reader a span {
+	BACKGROUND-POSITION: 0px -160px
+}
+#subscribe li#douban_reader a span {
+	BACKGROUND-POSITION: 0px -180px
+}
 #subscribe li a {
 	display:block;
 	padding:5px;
@@ -630,7 +636,7 @@ span.feed-icon{display:none;}
 	font-size:12px;
 }
 #subscribe li a:hover {
-	background:#EEDDCC;
+	background:#C1C4C8;
 }
 #tag_cloud a {
 	line-height:130%;
