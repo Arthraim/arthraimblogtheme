@@ -12,7 +12,7 @@ body, html {color: #666;font: 11px/17px "Lucida Grande","Lucida Sans Unicode",ge
 		h1 {font-size: 22px;text-align: right;float: left;width: 250px;margin: 0 15px 0 0;padding: 0 0 0 0;text-transform: uppercase;}
 		h1 a, h1 a:link, h1 a:visited, h1 a:active, h1 a:hover {font-size: 24px;}
 		h2 {text-align: left;float: right;width: 350px;margin: 0;padding: 0 0 0 0;}
-		#sidebar-1, #sidebar-2, {position:absolute;left;0px;text-align: right;width: 107px;margin: 0 0 0 10px;color:#333;background-color:#fff;background-image: url(img/1.gif);background-repeat: repeat-y;background-position: -40% 0;border-top:1px solid #eee;border-bottom:1px solid #ddd;border-left:1px solid #eee;border-right:1px solid #ddd;}
+		#sidebar-1, #sidebar-2 {position:absolute;left;0px;text-align: right;width: 107px;margin: 0 0 0 10px;color:#333;background-color:#fff;background-image: url(img/1.gif);background-repeat: repeat-y;background-position: -40% 0;border-top:1px solid #eee;border-bottom:1px solid #ddd;border-left:1px solid #eee;border-right:1px solid #ddd;}
 		#sidebar-1 {top:390px;padding: 10px 15px 15px 15px;}
 		#sidebar-2 {top:130px;padding: 5px 15px 20px 15px;}
 
@@ -20,9 +20,8 @@ body, html {color: #666;font: 11px/17px "Lucida Grande","Lucida Sans Unicode",ge
 		#sidebar-2 img {border-top:1px solid #eee;border-bottom:1px solid #ddd;border-left:1px solid #eee;border-right:1px solid #ddd;}
 		#sidebar-2 form p input {background-color:#fff;border:1px solid #7f9db9;height:18px;width:100px;padding: 2px 3px 0 3px;font: 11px/15px verdana, tahoma, sans-serif;}
 		#sidebar-2 form select {border:1px solid #7f9db9;height:20px;width:107px;}
+
 		#sidebar-2 form input {border:1px solid #7f9db9;background-color:#fff;}
-		
-		
 
 	#content {width:625px;float: right;margin: 0 10px 0 0;}
 
