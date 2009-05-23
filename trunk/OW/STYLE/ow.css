@@ -1,0 +1,70 @@
+* {margin: 0;padding: 0;}
+h1, h2, h3, input, textarea {font-size: 11px;font-weight:normal;line-height: 17px;}
+
+body, html {color: #666;font: 11px/17px "Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;text-align: center;background-color:#fff;background-image: url(img/1.gif);background-repeat: repeat-y;background-position: -250px 0;}
+
+#accessibility {position: absolute;top: -10000px;}
+
+#container {width:785px;margin: 0 auto;text-align: left;display:block;}
+
+	#head {width:625px;margin: 0 10px 0 0;padding:60px 0 45px 0;float: right;}
+
+		h1 {font-size: 22px;text-align: right;float: left;width: 250px;margin: 0 15px 0 0;padding: 0 0 0 0;text-transform: uppercase;}
+		h1 a, h1 a:link, h1 a:visited, h1 a:active, h1 a:hover {font-size: 24px;}
+		h2 {text-align: left;float: right;width: 350px;margin: 0;padding: 0 0 0 0;}
+		#sidebar-1, #sidebar-2 {position:absolute;left;0px;text-align: right;width: 107px;margin: 0 0 0 10px;color:#333;background-color:#fff;background-image: url(img/1.gif);background-repeat: repeat-y;background-position: -40% 0;border-top:1px solid #eee;border-bottom:1px solid #ddd;border-left:1px solid #eee;border-right:1px solid #ddd;}
+		#sidebar-1 {top:390px;padding: 10px 15px 15px 15px;}
+		#sidebar-2 {top:130px;padding: 5px 15px 20px 15px;}
+
+		#sidebar-2 p {margin: 10px 0 5px 0;}
+		#sidebar-2 img {border-top:1px solid #eee;border-bottom:1px solid #ddd;border-left:1px solid #eee;border-right:1px solid #ddd;}
+		#sidebar-2 form p input {background-color:#fff;border:1px solid #7f9db9;height:18px;width:100px;padding: 2px 3px 0 3px;font: 11px/15px verdana, tahoma, sans-serif;}
+		#sidebar-2 form select {border:1px solid #7f9db9;height:20px;width:107px;}
+
+		#sidebar-2 form input {border:1px solid #7f9db9;background-color:#fff;}
+
+	#content {width:625px;float: right;margin: 0 10px 0 0;}
+
+		h3 {clear:both;text-align: right;float: left;width: 250px;margin: 0 15px 0 0;padding: 0 0 0 0;text-transform: lowercase;}
+		h3 a, h3 a:link, h3 a:visited, h3 a:active, h3 a:hover {float:right;width: 250px;}
+		#content p, #content ul, #content ol, #content ol.comments li, #content form, #content table, #content div.right {text-align: left;float: right;width: 350px;margin: 0 0 0 0;padding: 0 0 10px 0;}
+		.comments_invite {text-transform: lowercase;}
+		.divider {float:left;visibility:hidden;padding-bottom:45px;}
+
+		#content ul, #content ol {list-style-position:inside;}
+		#content ul, #content ol.comments {list-style-type:none;}
+		#content ol.comments li {padding:20px 0 20px 0;border-top:1px solid #ddd;}
+		#content ol.comments li p {}
+
+		#content #txpCommentInputForm {padding:35px 0 45px 0;width:350px;border-top:1px solid #ddd;}
+		#content #txpCommentInputForm label {margin: 5px 0 0 0;float:right;}
+		#content #txpCommentInputForm #remember {float:left;border:0px solid #ccc;margin: 5px 0 0 0;}
+		#content #txpCommentInputForm #name, #txpCommentInputForm #email, #txpCommentInputForm #web {float:left;width:175px;height:20px;padding: 2px 3px 0 3px;font: 11px/15px verdana, tahoma, sans-serif;margin: 3px 0 0 15px;border:1px solid #ccc;color:#333;}
+		#content #txpCommentInputForm #message {float:left;width:280px;height:118px;padding: 2px 3px 0 3px;font: 11px/15px verdana, tahoma, sans-serif;margin: 3px 0 0 15px;border:1px solid #ccc;color:#333;}
+		#content #txpCommentInputForm #txpCommentHelpLink {float:left;margin: 3px 0 3px 15px;}
+		#content #txpCommentInputForm .button {cursor:pointer;display:block;background-color: #eee;margin: 3px 0 0 0;padding: 0px 5px 2px 5px;height:22px;border:1px solid #ccc;}
+
+#foot {width:615px;padding:60px 0 45px 0;float: right;}
+
+a, a:link, a:visited, a:active, a:hover {text-decoration: none;color: #57C15D;}
+a:hover {color: #cc6600;}
+
+strong {color:#333;}
+
+span.feed-icon {display:none;}
+
+#subscribe ul {display:none;background:#ffffff;background-image: url(img/1.gif);background-repeat: repeat-y;background-position: -60% 0;border:1px solid #B7B7B7;	width:180px;	padding:5px;}
+#subscribe li {	list-style:none;	float:left;margin:0;	padding:0;display:block;}
+#subscribe li a span {	background:url(img/readers.gif) no-repeat;height:20px;	width:80px;display:block;text-indent:-999em;}
+#subscribe li#google_reader a span {background-position:0 0;}
+#subscribe li#youdao_reader a span {background-position:0 -20px;}
+#subscribe li#xianguo_reader a span {background-position:0 -40px;}
+#subscribe li#zhuaxia_reader a span {background-position:0 -60px;}
+#subscribe li#yahoo_reader a span {background-position:0 -80px;}
+#subscribe li#newsgator_reader a span {	background-position:0 -100px;}
+#subscribe li#bloglines_reader a span {	background-position:0 -120px;}
+#subscribe li#inezha_reader a span {background-position:0 -140px;}
+#subscribe li#qq_reader a span {BACKGROUND-POSITION: 0px -160px}
+#subscribe li#douban_reader a span {BACKGROUND-POSITION: 0px -180px}
+#subscribe li a {display:block;padding:5px;text-decoration:none;width:80px;font-size:12px;}
+#subscribe li a:hover {background:#57C15D;}
