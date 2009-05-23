@@ -1,0 +1,47 @@
+﻿<div class="post cate<#article/category/id#> auth<#article/author/id#>">
+	<div>
+		<div style="float:left"><#template:article_navbar_l#></div>
+		<div style="float:right"><#template:article_navbar_r#></div>
+	</div>
+	<br><br>
+	<h3 class="entry-title">
+    	<a rel="bookmark" href="<#article/url#>"><#article/title#></a>
+    </h3>
+    <div class="right">
+        <p class="published">
+            <div>
+            <#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#> | Comments <#article/commnums#> | views <span id="spn<#article/id#>"></span>
+                <script language="JavaScript" type="text/javascript">strBatchCount+="spn<#article/id#>=<#article/id#>,"</script>
+            <br>
+            tags  <#template:article_tag#>
+            </div>
+        </p>
+	</div>
+        <address class="vcard author">
+            — 
+            <span class="fn">Arthraim</span>
+        </address>
+    <div class="right">
+        <div class="entry-content">
+            <#article/content#>
+        </div>
+        <p>
+            <br />
+            <ul class="msg mutuality">
+                <#ZC_MSG231#>:
+                <li class="msgarticle"><#template:article_mutuality#></li>
+            </ul>
+            <p></p>
+            <#template:article_trackback#>
+            <p><br />
+            <#template:article_comment#>
+            <P></p>
+            <p></p>
+            <p><br />
+            <#template:article_commentpost#>
+            <p></p>
+            </p>
+            </p>
+        </p>
+	</div>
+</div>

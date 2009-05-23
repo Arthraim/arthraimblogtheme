@@ -1,0 +1,27 @@
+﻿<div class="post cate<#article/category/id#> auth<#article/author/id#>">
+	<h3 class="entry-title">
+    	<a rel="bookmark" href="<#article/url#>"><#article/title#></a>
+    	<#article/category/name#>
+    </h3>
+	<div class="right">
+        <p class="published">
+            <#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#>
+        </p>
+    </div>
+	<div class="right">
+        <div class="entry-content">
+            <#article/intro#>
+        </div>
+        <p class="Readmore">
+            <a href="<#article/url#>">Full Article...</a>
+        </p>
+        <p class="tags">
+            Tags: <#template:article_tag#>
+        </p>
+        <p class="comments_invite">
+            Comments: <#article/commnums#> | Views: <span id="spn<#article/id#>"></span>
+                    <script language="JavaScript" type="text/javascript">strBatchView+="spn<#article/id#>=<#article/id#>,"</script></span>
+        </p>
+    </div>
+</div>
+<div class="divider"></div>
