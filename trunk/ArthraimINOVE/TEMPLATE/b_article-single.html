@@ -1,0 +1,86 @@
+﻿<div class="post cate<#article/category/id#> auth<#article/author/id#>">
+	<div class="post">
+	<div>
+		<div style="float:left"><#template:article_navbar_l#></div>
+		<div style="float:right"><#template:article_navbar_r#></div>
+	</div>
+	<br><br>
+	<h2><a href="<#article/url#>"><#article/title#></a></h2>
+		<div class="info">
+			<span class="date"><#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#> | tags  <#template:article_tag#> | views <span id="spn<#article/id#>"></span>
+                <script language="JavaScript" type="text/javascript">strBatchCount+="spn<#article/id#>=<#article/id#>,"</script>
+</span>
+			<div class="act">
+			<span class="comments"><span>Comments <#article/commnums#></span></span>
+			<div class="fixed"></div>
+			</div>
+			<div class="fixed"></div>
+			</div>
+			<div class="content">
+				<#article/content#>
+                <style type="text/css">
+				#SingleCopyright {
+				text-align:left;
+				border:1px #B0BDC6 solid;
+				padding:3px;
+				margin: 0 0 10px 0;
+				overflow: auto;
+				_height: 1%;
+				}
+				#SingleCopyrightImage{
+					background-image: url(http://arthraim.cn/THEMES/inove/STYLE/img/Be_Original.jpg);
+					height: 65px;
+					width: 150px;
+					float: left;
+				}
+				#SingleCopyrightText {
+					height: 65px;
+					line-height: 32px;
+					text-align: left;
+					float: left;
+					width: 300px;
+				}
+				#SingleCopyrightSep {
+					height: 65px;
+					line-height: 32px;
+					text-align: left;
+					float: left;
+					width: 30px;
+				}
+				
+				</style>
+				<div id=SingleCopyrightPre>
+					<div id=SingleCopyright>
+						<div id=SingleCopyrightImage>
+						</div>
+						<div id=SingleCopyrightSep>
+						</div>
+						<div id=SingleCopyrightText>
+						本文如需转载，请注明：<br/>转载自<a href="http://arthraim.cn/">Arthraim.cn</a>
+						</div>
+					</div>
+				</div>
+			<p class="under">
+			</p>
+			<div class="fixed"></div>
+		</div>
+	</div>
+</div>
+
+<p><br />
+<ul class="msg mutuality">
+	<#ZC_MSG231#>:
+	<li class="msgarticle"><#template:article_mutuality#></li>
+</ul>
+<p></p>
+
+<#template:article_trackback#>
+
+<p><br />
+<#template:article_comment#>
+<P></p>
+<p></p>
+
+<p><br />
+	<#template:article_commentpost#>
+<p></p>
