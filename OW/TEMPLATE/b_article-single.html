@@ -25,34 +25,78 @@
 		<div class="entry-content">
 			<#article/content#>
 		</div>
+    </div>
         <p></p>
         <p></p>
         <p></p>
+    <div class="right">
 		<p>
 			任何形式的转载，请注明本文由<#article/author/name#>发表于<a href="http://arthraim.cn/">Arthraim.cn</a>
 			<br />
 			引用链接: <a href="<#article/trackback_url#>"><#article/trackback_url#></a>
 		</p>
+	</div>
         <p></p>
         <p></p>
         <p></p>
+    <div class="right">
 		<p>
 			<#ZC_MSG231#>:
 			<ul class="msg mutuality">
 					<li class="msgarticle"><#template:article_mutuality#></li>
 			</ul>
 		</p>
-		<p></p>
+	</div>
+        <p></p>
+        <p></p>
+        <p></p>
+    <div class="right">
         <P>
 			<#template:article_trackback#>
-			<br />
-			<#template:article_comment#>
-		</p>
-		<p></p>
+        </P>
+	</div>
+        <p></p>
+        <p></p>
+        <p></p>
+    <div class="right">
 		<p>
-			<br />
-			<#template:article_commentpost#>
-			<p></p>
+            <!-- Include the Google Friend Connect javascript library. -->
+            <script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+            <!-- Define the div tag where the gadget will be inserted. -->
+            <div id="div-251870616227458266" style="width:300px;"></div>
+            <!-- Render the gadget into a div. -->
+            <script type="text/javascript">
+            var skin = {};
+            skin['BORDER_COLOR'] = 'transparent';
+            skin['ENDCAP_BG_COLOR'] = 'transparent';
+            skin['ENDCAP_TEXT_COLOR'] = '#57C15D';
+            skin['ENDCAP_LINK_COLOR'] = '#57C15D';
+            skin['ALTERNATE_BG_COLOR'] = 'transparent';
+            skin['CONTENT_BG_COLOR'] = 'transparent';
+            skin['CONTENT_LINK_COLOR'] = '#57C15D';
+            skin['CONTENT_TEXT_COLOR'] = '#333333';
+            skin['CONTENT_SECONDARY_LINK_COLOR'] = '#006600';
+            skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+            skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+            skin['DEFAULT_COMMENT_TEXT'] = '- \u770b\u5b8c\u4e86\u5c31\u5728\u8fd9\u91cc\u56de\u590d\u548c\u8bc4\u5206\u5427 -';
+            skin['HEADER_TEXT'] = ' \u56de\u590d';
+            skin['POSTS_PER_PAGE'] = '5';
+            google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+            google.friendconnect.container.renderReviewGadget(
+             { id: 'div-251870616227458266',
+               site: '17893568565996065947',
+               'view-params':{"disableMinMax":"false","scope":"PAGE","allowAnonymousPost":"true","startMaximized":"true"}
+             },
+              skin);
+            </script>        
+		</p>
+	</div>
+        <p></p>
+    <div class="right">
+        <p>    
+			<strong>历史回复:</strong>
+            <br />
+			<#template:article_comment#>
 		</p>
 	</div>
 </div>

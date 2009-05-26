@@ -52,6 +52,7 @@ a:hover {color: #cc6600;}
 strong {color:#333;}
 
 span.feed-icon {display:none;}
+#attachshow, div.pagemenu {text-align: left;float: right;width: 350px;margin: 0 0 0 0;padding: 0 0 10px 0;}
 
 #subscribe ul {display:none;background:#ffffff;background-image: url(img/1.gif);background-repeat: repeat-y;background-position: -60% 0;border:1px solid #B7B7B7;	width:180px;	padding:5px;}
 #subscribe li {	list-style:none;	float:left;margin:0;	padding:0;display:block;}
