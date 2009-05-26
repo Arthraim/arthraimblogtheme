@@ -29,192 +29,93 @@
 </head>
 
 
-<body class="<#CUSTOM_TAGS_BODYCLASS#>">
-<!-- wrap START -->
-<div id="wrap">
+<body>
+<!-- accessibility START -->
+<div id="accessibility">
+</div>
+<!-- accessibility END -->
 <!-- container START -->
 <div id="container">
 
 <!-- header START -->
-<div id="header">
-	<div id="caption">
-		<h1 id="title"><a href="<#ZC_BLOG_HOST#>"><#ZC_BLOG_NAME#></a></h1>
-		<div id="tagline"><#ZC_BLOG_SUB_NAME#></div>
-	</div>
-
-	<!-- navigation START -->
-	<div id="navigation">
-		<ul id="menus">
-			<li class="current_page_item"><a class="home" title="HOME" href="<#ZC_BLOG_HOST#>">首页</a></li>
-			<#CACHE_INCLUDE_NAVBAR#>
-			<li><a class="lastmenu" href="javascript:void(0);"></a></li>
-		</ul>
-
-		<!-- searchbox START -->
-		<div id="searchbox">
-							<form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
-					<div class="content">
-						<input type="text" class="textfield" name="edtSearch" size="24" value="" />
-						<a class="switcher" >Switcher</a>
-					</div>
-				</form>
-					</div>
-		<!-- searchbox END -->
-
-		<div class="fixed"></div>
-	</div>
-	<!-- navigation END -->
-
-	<div class="fixed"></div>
+<div id="head">
+	<h1 id="site-name"><a rel="home" href="<#ZC_BLOG_HOST#>"><#ZC_BLOG_NAME#></a></h1>
+	<p id="site-slogan"><#ZC_BLOG_SUB_NAME#></p>
 </div>
 <!-- header END -->
 
+<!-- sidebar-2 START-->
+<div id="sidebar-2">
+    <form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
+        <p>
+            Search | <a class="switcher" >Switcher</a>
+            <br>
+            <input type="text" class="textfield" name="edtSearch" size="15" value="" />
+        </p>
+    </form>
+    <ul id="section_list">
+        <#CACHE_INCLUDE_NAVBAR#>
+    </ul>
+</div>
+<!-- sidebar-2 END-->
+
+<!-- sidebar-1 START-->
+<div id="sidebar-1">
+    <ul>
+        <#CACHE_INCLUDE_CATALOG#>
+    </ul>
+    <br>
+	<div id="subscribe"> 
+        <a id="feedrss" title="Subscribe to this blog..." href="http://feed.arthraim.cn/"><abbr title="Really Simple Syndication">RSS</abbr></a> 
+        <ul id="feed_readers"> 
+            <li id="google_reader"><a class="reader" title="Subscribe with Google" onclick="window.open(this.href);return false;" href="http://fusion.google.com/add?feedurl=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="youdao_reader"><a class="reader" title="Subscribe with 有道" onclick="window.open(this.href);return false;" href="http://reader.youdao.com/#url=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="xianguo_reader"><a class="reader" title="Subscribe with 鲜果" onclick="window.open(this.href);return false;" href="http://www.xianguo.com/subscribe.php?url=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="zhuaxia_reader"><a class="reader" title="Subscribe with 抓虾" onclick="window.open(this.href);return false;" href="http://www.zhuaxia.com/add_channel.php?url=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="qq_reader"><a class="reader" title="Subscribe with QQ 邮箱" onclick="window.open(this.href);return false;" href="http://mail.qq.com/cgi-bin/feed?u=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="douban_reader"><a class="reader" title="Subscribe with 豆瓣" onclick="window.open(this.href);return false;" href="http://9.douban.com/subject/9302882/"><span></span></a></li> 
+            <li id="yahoo_reader"><a class="reader" title="Subscribe with My Yahoo!" onclick="window.open(this.href);return false;" href="http://add.my.yahoo.com/rss?url=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="newsgator_reader"><a class="reader" title="Subscribe with newsgator" onclick="window.open(this.href);return false;" href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="bloglines_reader"><a class="reader" title="Subscribe with Bloglines" onclick="window.open(this.href);return false;" href="http://www.bloglines.com/sub/http://feed.arthraim.cn/"><span></span></a></li> 
+            <li id="inezha_reader"><a class="reader" title="Subscribe with iNezha" onclick="window.open(this.href);return false;" href="http://inezha.com/add?url=http://feed.arthraim.cn/"><span></span></a></li> 
+        </ul> 
+         | 
+        <a id="feedemail" title="Subscribe to this blog..." href="http://feed.arthraim.cn/">Email</a> 
+    </div>
+</div>
+<!-- sidebar-1 END-->
+
+
+
 <!-- content START -->
 <div id="content">
-
-	<!-- main START -->
-	<div id="main">
-		<h2 class="post-title"><#CUSTOM_TAGS_TITLE#></h2>
+	<div class="hfeed">
+		<h3 class="entry-title"><#CUSTOM_TAGS_TITLE#></h3>
         <!--标签列表，标签tag页必需品-->
-        <div class="post-body"><#CUSTOM_TAGS#></div>
-
+		<div class="right">
+    		<#CUSTOM_TAGS#>
+    	</div>
 	</div>
-	<!-- main END -->
-
-	
-<!-- sidebar START -->
-<div id="sidebar">
-
-<!-- sidebar north START -->
-<div id="northsidebar" class="sidebar">
-
-	<!-- feeds -->
-    <div class="widget widget_feeds"> 
-		<div class="content"> 
-			<div id="subscribe"> 
-				<a id="feedrss" title="Subscribe to this blog..." href="http://feed.arthraim.cn/"><abbr title="Really Simple Syndication">RSS</abbr> feed</a> 
-				<ul id="feed_readers"> 
-					<li id="google_reader"><a class="reader" title="Subscribe with Google" href="http://fusion.google.com/add?feedurl=http://feed.arthraim.cn/"><span>Google</span></a></li> 
-					<li id="youdao_reader"><a class="reader" title="Subscribe with Youdao" href="http://reader.youdao.com/#url=http://feed.arthraim.cn/"><span>Youdao</span></a></li> 
-					<li id="xianguo_reader"><a class="reader" title="Subscribe with Xian Guo" href="http://www.xianguo.com/subscribe.php?url=http://feed.arthraim.cn/"><span>Xian Guo</span></a></li> 
-					<li id="zhuaxia_reader"><a class="reader" title="Subscribe with Zhua Xia" href="http://www.zhuaxia.com/add_channel.php?url=http://feed.arthraim.cn/"><span>Zhua Xia</span></a></li> 
-					<li id="yahoo_reader"><a class="reader" title="Subscribe with My Yahoo!"	href="http://add.my.yahoo.com/rss?url=http://feed.arthraim.cn/"><span>My Yahoo!</span></a></li> 
-					<li id="newsgator_reader"><a class="reader" title="Subscribe with newsgator"	href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=http://feed.arthraim.cn/"><span>newsgator</span></a></li> 
-					<li id="bloglines_reader"><a class="reader" title="Subscribe with Bloglines"	href="http://www.bloglines.com/sub/http://feed.arthraim.cn/"><span>Bloglines</span></a></li> 
-					<li id="inezha_reader"><a class="reader" title="Subscribe with iNezha"	href="http://inezha.com/add?url=http://feed.arthraim.cn/"><span>iNezha</span></a></li> 
-				</ul> 
-			</div>
-            <a id="feedemail" title="Subscribe to this blog via Email..." href="http://www.feedsky.com/msub_wr.html?burl=Arthraim">Email feed</a> 
-						<div class="fixed"></div> 
-		</div> 
-	</div> 
-    
-	<!-- calendar -->
-    <div class="widget widget_calendar" id="divCalendar">
-		<h3>Calendar</h3>
-        <div><#CACHE_INCLUDE_CALENDAR_NOW#></div>
-    </div>
-
-	<!-- categories -->
-	<div class="widget widget_categories">
-		<h3>Previous</h3>
-		<ul>
-			<#CACHE_INCLUDE_PREVIOUS#>
-		</ul>
-	</div>
-
-	<!-- tag cloud -->
-	<div id="tag_cloud" class="widget">
-		<h3>Comments</h3>
-		<ul>
-			<#CACHE_INCLUDE_COMMENTS#>
-		</ul>
-	</div>
-	
-</div>
-<!-- sidebar north END -->
-
-<div id="centersidebar">
-
-	<!-- sidebar east START -->
-	<div id="eastsidebar" class="sidebar">
-	
-		<!-- categories -->
-		<div class="widget widget_categories">
-			<h3>Categories</h3>
-			<ul>
-				<#CACHE_INCLUDE_CATALOG#>
-			</ul>
-		</div>
-
-		</div>
-	<!-- sidebar east END -->
-
-	<!-- sidebar west START -->
-	<div id="westsidebar" class="sidebar">
-	
-		<!-- archives -->
-		<div class="widget widget_archive">
-			<h3>Archives</h3>
-			<ul>
-				<#CACHE_INCLUDE_ARCHIVES#>
-			</ul>
-		</div>
-
-		</div>
-	<!-- sidebar west END -->
-	<div class="fixed"></div>
-</div>
-
-<!-- sidebar south START -->
-<div id="southsidebar" class="sidebar">
-
-	<!-- meta -->
-	<div class="widget">
-		<h3>Meta</h3>
-		<ul>
-			<li><a href="cmd.asp?act=login">[<#ZC_MSG009#>]</a>&nbsp;&nbsp;<a href="cmd.asp?act=vrs">[<#ZC_MSG021#>]</a></li>
-		</ul>
-	</div>
-	
-	<div class="widget">
-		<h3>Misc</h3>
-		<ul>
-			<#CACHE_INCLUDE_MISC#>
-		</ul>
-	</div>	
-	
-	<div class="widget">
-		<h3>Blogroll</h3>
-		<ul>
-			<#CACHE_INCLUDE_LINK#>
-		</ul>
-	</div>
-
-</div>
-<!-- sidebar south END -->
-
-</div>
-<!-- sidebar END -->
-	<div class="fixed"></div>
 </div>
 <!-- content END -->
 
-<!-- footer START -->
-<div id="footer">
-	<a id="gotop" href="#" onclick="MGJS.goTop();return false;">Top</a>
-	<!-- <a id="powered" href="http://wordpress.org/">WordPress</a> -->
-	<div id="copyright">
-		<#ZC_BLOG_COPYRIGHT#></div>
-	<div id="themeinfo">
-		Theme by <a href="http://www.neoease.com/">mg12</a>. Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.1</a> , <a href="http://jigsaw.w3.org/css-validator/">CSS 3</a> and <a href="http://www.xchan.cn">xChan</a>.	</div>
+<!-- foot START -->
+<div id="foot">
+	<p align="center">
+    	<#ZC_BLOG_COPYRIGHT#>
+        <br>
+        Powered by
+        <a href="http://www.rainbowsoft.org/">Z-Blog</a>
+         | OW! theme by efb | Comments by their original authors. 
+        <br>
+      <a href="#" onclick="MGJS.goTop();return false;">Top</a>
+    </p>
 </div>
-<!-- footer END -->
+<!-- foot END -->
 
 </div>
 <!-- container END -->
-</div>
-<!-- wrap END -->
+
 
 <script language="JavaScript" type="text/javascript">
 $(document).ready(function(){ 
@@ -231,6 +132,35 @@ catch(e){};
 </script>
 <script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/util.js"></script> 
 <script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/menu.js"></script>
+<!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+<!-- Define the div tag where the gadget will be inserted. -->
+<div id="div-485180475720256713"></div>
+<!-- Render the gadget into a div. -->
+<script type="text/javascript">
+var skin = {};
+skin['BORDER_COLOR'] = '#cccccc';
+skin['ENDCAP_BG_COLOR'] = '#ffffff';
+skin['ENDCAP_TEXT_COLOR'] = '#333333';
+skin['ENDCAP_LINK_COLOR'] = '#57C15D';
+skin['ALTERNATE_BG_COLOR'] = 'transparent';
+skin['CONTENT_BG_COLOR'] = 'transparent';
+skin['CONTENT_LINK_COLOR'] = '#57C15D';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#006600';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+skin['POSITION'] = 'top';
+skin['DEFAULT_COMMENT_TEXT'] = 'Say whatever you want about my site ;)';
+skin['HEADER_TEXT'] = 'Comments';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderSocialBar(
+ { id: 'div-485180475720256713',
+   site: '17893568565996065947',
+   'view-params':{"scope":"SITE","features":"video,comment","showWall":"true"}
+ },
+  skin);
+</script>
 </body>
 </html>
 <!-- <#BLOG_CREATE_TIME#> -->

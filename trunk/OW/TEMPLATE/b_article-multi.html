@@ -8,18 +8,20 @@
             <#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#>
         </p>
     </div>
-	<div class="right">
+	<div class="right" id="article_intro">
         <div class="entry-content">
             <#article/intro#>
         </div>
         <p class="Readmore">
             <a href="<#article/url#>">Full Article...</a>
         </p>
+    </div>
+	<div class="right">
         <p class="tags">
             Tags: <#template:article_tag#>
         </p>
         <p class="comments_invite">
-            Comments: <#article/commnums#> | Views: <span id="spn<#article/id#>"></span> | Trackback: <#article/trackbacknums#>
+            Views: <span id="spn<#article/id#>"></span> | Trackback: <#article/trackbacknums#>
                     <script language="JavaScript" type="text/javascript">strBatchView+="spn<#article/id#>=<#article/id#>,"</script></span>
         </p>
     </div>
