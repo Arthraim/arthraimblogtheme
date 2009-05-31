@@ -46,25 +46,7 @@
 
 <!-- sidebar-2 START-->
 <div id="sidebar-2">
-    <form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
-        <p>
-            Search | <a class="switcher" >Switcher</a>
-            <br>
-            <input type="text" class="textfield" name="edtSearch" size="15" value="" />
-        </p>
-    </form>
-    <ul id="section_list">
-        <#CACHE_INCLUDE_NAVBAR#>
-    </ul>
-</div>
-<!-- sidebar-2 END-->
-
-<!-- sidebar-1 START-->
-<div id="sidebar-1">
-    <ul>
-        <#CACHE_INCLUDE_CATALOG#>
-    </ul>
-    <br>
+    <!-- subscribe -->
 	<div id="subscribe"> 
         <a id="feedrss" title="Subscribe to this blog..." href="http://feed.arthraim.cn/"><abbr title="Really Simple Syndication">RSS</abbr></a> 
         <ul id="feed_readers"> 
@@ -82,10 +64,34 @@
          | 
         <a id="feedemail" title="Subscribe to this blog..." href="http://feed.arthraim.cn/">Email</a> 
     </div>
+    <!-- search -->
+	<form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
+        <p>
+            Search | <a class="switcher" >Switcher</a>
+            <br>
+            <input type="text" class="textfield" name="edtSearch" size="15" value="" />
+        </p>
+    </form>
+    <p></p>
+    <!-- menu -->
+    <ul id="section_list">
+        <#CACHE_INCLUDE_NAVBAR#>
+    </ul>
+</div>
+<!-- sidebar-2 END-->
+
+<!-- sidebar-1 START-->
+<div id="sidebar-1">
+	<!-- calendar -->
+    <div class="Calendar" id="divCalendar">
+        <div><#CACHE_INCLUDE_CALENDAR_NOW#></div>
+    </div>
+    <!-- catalog -->
+    <ul>
+        <#CACHE_INCLUDE_CATALOG#>
+    </ul>
 </div>
 <!-- sidebar-1 END-->
-
-
 
 <!-- content START -->
 <div id="content">
