@@ -52,13 +52,13 @@
 
 		<!-- searchbox START -->
 		<div id="searchbox">
-							<form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
+				<form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
 					<div class="content">
 						<input type="text" class="textfield" name="edtSearch" size="24" value="" />
 						<a class="switcher" >Switcher</a>
 					</div>
 				</form>
-					</div>
+		</div>
 		<!-- searchbox END -->
 
 		<div class="fixed"></div>
@@ -139,13 +139,13 @@
 	<!-- sidebar east START -->
 	<div id="eastsidebar" class="sidebar">
 	
-		<!-- categories -->
-		<div class="widget widget_categories">
-			<h3>Categories</h3>
+		<!-- archives -->
+		<div class="widget widget_archive">
+			<h3>Archives</h3>
 			<ul>
-				<#CACHE_INCLUDE_CATALOG#>
+				<#CACHE_INCLUDE_ARCHIVES#>
 			</ul>
-		</div>
+		</div>		
 
     </div>
     <!-- sidebar east END -->
@@ -153,15 +153,15 @@
 	<!-- sidebar west START -->
 	<div id="westsidebar" class="sidebar">
 	
-		<!-- archives -->
-		<div class="widget widget_archive">
-			<h3>Archives</h3>
+    	<!-- categories -->
+		<div class="widget widget_categories">
+			<h3>Categories</h3>
 			<ul>
-				<#CACHE_INCLUDE_ARCHIVES#>
+				<#CACHE_INCLUDE_CATALOG#>
 			</ul>
 		</div>
 
-		</div>
+	</div>
 	<!-- sidebar west END -->
 	<div class="fixed"></div>
 </div>
@@ -261,7 +261,7 @@ google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html an
 google.friendconnect.container.renderSocialBar(
  { id: 'div-8187853656066283054',
    site: '17893568565996065947',
-   'view-params':{"scope":"PAGE","features":"video,comment","showWall":"true"}
+   'view-params':{"scope":"SITE","features":"video,comment","showWall":"true"}
  },
   skin);
 </script>
