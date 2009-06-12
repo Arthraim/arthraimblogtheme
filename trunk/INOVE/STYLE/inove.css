@@ -24,8 +24,8 @@ body {
 	font-size:12px;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-weight:bolder;
-	letter-spacing:-0.07em;
+	font-weight:bold;
+	letter-spacing:-0.05em;
 	font-family:Arial;
 }
 h1 {font-size:200%;}
@@ -238,27 +238,34 @@ textarea {
 	background-position:0 0;
 }
 #searchbox {
-	width:280px;
+	background: url(img/searchbox.gif) no-repeat;
+	width:209px;
+	height:23px;
+	display:block;
 	float:right;
-	padding:4px 10px;
+	margin-top:4px;
+	margin-right:10px !important;
+	margin-right:5px;
+	padding:2px;
 }
 #searchbox .textfield {
-	line-height:16px;
-	width:180px;
-	float:right;
+	background:none;
+	border:0px;
+	width:185px;
+	float:left;
+	margin-right:2px;
+	padding-left:2px;
 }
 #searchbox .switcher {
-	background:url(img/icons.gif) 0 0 no-repeat;
-	float:right;
+	background:none;
+	border:0px;
 	width:18px;
-	height:22px;
-	line-height:16px;
+	height:18px;
+	cursor:pointer;
+	float:left;
+	margin-top:1px;
 	display:block;
 	text-indent:-999em;
-	float:right;
-	padding:0 2px;
-	height:16px;
-	margin-top:3px;
 }
 /* header END */
 
@@ -1092,125 +1099,154 @@ li.msgarticle div.quote-title{
 	padding-top:0.5em;
 }
 
-/*---------------------------------------------------------------
- * The following contents are all about Clendar
- * Added by Arthraim
- * Apr.16.2009
- *---------------------------------------------------------------*/
-#divCalendar{
-
-}
-
-#divCalendar h3{
-	display:none;
-}
-
-#divCalendar div{
+/* calendar START*/
+#sidebar .widget_calendar {
 	margin:0 0 0 0;
-	padding:0 3% 5px 3%;
+	padding:0 1% 10px 1% ;
 	float:left;
-	width:94%;
+	width:98%;
 }
-#divCalendar div.month1{
-	background:url("img/month1.gif") no-repeat center 20px;
+#divCalendar div{
+	width:100%;
+	font-size:10px;
 }
-#divCalendar div.month2{
-	background:url("img/month2.gif") no-repeat center 20px;
-}
-#divCalendar div.month3{
-	background:url("img/month3.gif") no-repeat center 20px;
-}
-#divCalendar div.month4{
-	background:url("img/month4.gif") no-repeat center 20px;
-}
-#divCalendar div.month5{
-	background:url("img/month5.gif") no-repeat center 20px;;
-}
-#divCalendar div.month6{
-	background:url("img/month6.gif") no-repeat center 20px;
-}
-#divCalendar div.month7{
-	background:url("img/month7.gif") no-repeat center 20px;
-}
-#divCalendar div.month8{
-	background:url("img/month8.gif") no-repeat center 20px;
-}
-#divCalendar div.month9{
-	background:url("img/month9.gif") no-repeat center 20px;
-}
-#divCalendar div.month10{
-	background:url("img/month10.gif") no-repeat center 20px;
-}
-#divCalendar div.month11{
-	background:url("img/month11.gif") no-repeat center 20px;
-}
-#divCalendar div.month12{
-	background:url("img/month12.gif") no-repeat center 20px;
-}
-p.w{
-	float:left;
-	width:14%;
-	height:16px;
-	margin:4px 0 0 0;
-	padding:4px 0 1px 0;
-	text-align:center;
-	vertical-align :middle;
-	font-size:9px;
-	background-color:#f0f0f0;
-}
-
-p.y{
-	text-align:center;
+p.y{/*Title Year-month-day*/
+	text-align:right;
 	margin:2px 0 0 0;
 	padding:0 0 0 0;
 	float:left;
-	width:100%;
+	width:98%;
 	font-size:13px;
 	font-weight:bold;
+	background:#CCCCCC;
 }
-p.d{
+p.w{/*week day*/
 	float:left;
 	width:14%;
-	height:20px;
-	margin:0 0 0 0;
-	padding:2px 0 0 0;
+	height:16px;
 	text-align:center;
 	vertical-align :middle;
+	background:#A0A0A0;
+	color:#FFF;
+	font-weight:bold;
 }
-p.yd{
+p.d{/*day*/
 	float:left;
 	width:14%;
-	height:20px;
-	margin:0 0 0 0;
-	padding:2px 0 0 0;
+	height:16px;
+	text-align:center;
+	vertical-align :middle;
+	border:#000000;
+}
+p.yd{/*written day*/
+	float:left;
+	width:14%;
+	height:16px;
 	text-align:center;
 	vertical-align :middle;
 	color:#6090c0;
 	font-weight : bold;
-	background: url("img/links_r.gif") no-repeat 1px 1px;
+	background:#DDDDDD;
 }
-p.nd{
+p.nd{/*no date*/
 	float:left;
 	width:14%;
-	height:20px;
-	margin:0 0 0 0;
-	padding:2px 0 0 0;
+	height:16px;
 	text-align:center;
 	vertical-align :middle;
 }
 p.cd{
 	float:left;
 	width:14%;
-	height:20px;
-	margin:0 0 0 0;
-	padding:2px 0 0 0;
+	height:16px;
 	text-align:center;
 	vertical-align :middle;
 }
+/* calendar END */
 
-#sidebar .widget_calendar {
-	margin:0 0 0 0;
-	padding:0 3% 5px 3%;
-	float:left;
-	width:94%;
+/* thread twitter START */
+.post .twitter-tweedles {
+	background:#E2F2FB;
+	border:1px dashed #3FCDEB;
+	padding:10px 0 0;
 }
+.twitter ul {
+	margin:0 12px 0 10px !important;
+	margin:0 10px;
+}
+.post .content .twitter ul li {
+	background:#FCFCFC;
+	padding:0;
+	float:left;
+	list-style:none;
+	list-style-position:outside;
+	border:solid #CCC;
+	border-width:1px !important;
+	border-width:1px 0;
+	width:100%;
+	padding-top:10px;
+	margin-bottom:10px;
+}
+.twitter img {
+	float:left;
+	padding:0 10px 0 0;
+	margin:0 0 10px 10px;
+}
+.twitter_source {
+	color:#999;
+	font-family:georgia;
+	font-style:italic;
+	font-size:10px;
+}
+.twitter_source a {
+	color:#999;
+}
+.twitter_text {
+	margin-bottom:5px;
+	display:block;
+	padding-left:70px;
+	padding-right:10px;
+}
+.twitter_reply {
+	background: url(img/icons.gif) 0 -112px no-repeat;
+	padding-left:22px;
+	padding-right:10px;
+	height:16px;
+	line-height:16px;
+	display:block;
+	font-size:11px;
+	float:right;
+}
+.twitter .twitter_pagebar {
+	padding:0 10px;
+	font-size:11px;
+}
+.twitter .twitter_pagebar a {
+	background:#D1EAF9;
+	padding:2px 5px;
+	border:1px solid #D1EAF9;
+}
+.twitter .twitter_pagebar a:hover {
+	border:1px dashed #3FCDEB;
+	text-decoration:none;
+}
+.twitter .twitter_pagebar strong {
+	background:#A6D0E7;
+	padding:2px 5px;
+	border:1px solid #A6D0E7;
+}
+.post .content .thread_twitter_power_by {
+	display:block;
+	background:#D1EAF9;
+	border-top:1px dashed #3FCDEB;
+	margin-bottom:0;
+	padding:5px 10px;
+}
+.twitter .navigation {
+	padding:10px 5px;
+}
+#thread_twitter .loading {
+	padding:0 10px;
+	font-size:11px;
+}
+/* thread twitter END */
