@@ -9,7 +9,7 @@
 		<div class="info">
 			<span class="date"><#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#> | tags  <#template:article_tag#> | views <span id="spn<#article/id#>"></span>
                 <script language="JavaScript" type="text/javascript">strBatchCount+="spn<#article/id#>=<#article/id#>,"</script>
-</span>
+			</span>
 			<div class="act">
 			<span class="comments"><span>Comments <#article/commnums#></span></span>
 			<div class="fixed"></div>
@@ -18,48 +18,11 @@
 			</div>
 			<div class="content">
 				<#article/content#>
-                <style type="text/css">
-				#SingleCopyright {
-				text-align:left;
-				border:1px #B0BDC6 solid;
-				padding:3px;
-				margin: 0 0 10px 0;
-				overflow: auto;
-				_height: 1%;
-				}
-				#SingleCopyrightImage{
-					background-image: url(http://arthraim.cn/THEMES/inove/STYLE/img/Be_Original.jpg);
-					height: 65px;
-					width: 150px;
-					float: left;
-				}
-				#SingleCopyrightText {
-					height: 65px;
-					line-height: 32px;
-					text-align: left;
-					float: left;
-					width: 300px;
-				}
-				#SingleCopyrightSep {
-					height: 65px;
-					line-height: 32px;
-					text-align: left;
-					float: left;
-					width: 30px;
-				}
-				
-				</style>
-				<div id=SingleCopyrightPre>
-					<div id=SingleCopyright>
-						<div id=SingleCopyrightImage>
-						</div>
-						<div id=SingleCopyrightSep>
-						</div>
-						<div id=SingleCopyrightText>
-						本文如需转载，请注明：<br/>转载自<a href="http://arthraim.cn/">Arthraim.cn</a>
-						</div>
-					</div>
-				</div>
+                <p>
+                    任何形式的转载，请注明本文由<#article/author/name#>发表于<a href="http://arthraim.cn/">Arthraim.cn</a>
+                    <br />
+                    引用链接: <a href="<#article/trackback_url#>"><#article/trackback_url#></a>
+                </p>
 			<p class="under">
 			</p>
 			<div class="fixed"></div>
@@ -73,14 +36,35 @@
 	<li class="msgarticle"><#template:article_mutuality#></li>
 </ul>
 <p></p>
-
 <#template:article_trackback#>
-
 <p><br />
-<#template:article_comment#>
-<P></p>
-<p></p>
-
-<p><br />
-	<#template:article_commentpost#>
-<p></p>
+<!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+<!-- Define the div tag where the gadget will be inserted. -->
+<div id="div-6146721891226787544" style="width:600px;border:1px solid #cccccc;"></div>
+<!-- Render the gadget into a div. -->
+<script type="text/javascript">
+var skin = {};
+skin['BORDER_COLOR'] = '#cccccc';
+skin['ENDCAP_BG_COLOR'] = '#ffffff';
+skin['ENDCAP_TEXT_COLOR'] = '#333333';
+skin['ENDCAP_LINK_COLOR'] = '#2970a6';
+skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+skin['CONTENT_BG_COLOR'] = '#ffffff';
+skin['CONTENT_LINK_COLOR'] = '#2970a6';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#2970a6';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+skin['DEFAULT_COMMENT_TEXT'] = '- add your review here -';
+skin['HEADER_TEXT'] = 'Ratings';
+skin['POSTS_PER_PAGE'] = '10';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderReviewGadget(
+ { id: 'div-6146721891226787544',
+   site: '17893568565996065947',
+   'view-params':{"disableMinMax":"false","scope":"PAGE","startMaximized":"true"}
+ },
+  skin);
+</script>
+</p>
