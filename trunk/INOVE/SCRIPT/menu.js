@@ -1,6 +1,6 @@
 /*
 Author: mg12
-Update: 2008/11/27
+Update: 2009/06/06
 Author URI: http://www.neoease.com/
 */
 (function() {
@@ -16,12 +16,10 @@ var Class = {
 var GhostlyMenu = Class.create();
 GhostlyMenu.prototype = {
 
-	initialize: function(target, align, opacity, offset) {
+	initialize: function(target, align, sub) {
 		this.obj = cleanWhitespace(target);
 		this.align = align || 'left';
-		this.opacity = 0;
-		this.maxopacity = opacity || 1;
-		this.offset = offset || 0;
+		this.sub = sub || -1;
 
 		this.menu = this.obj.childNodes
 		if (this.menu.length < 2) { return; }
@@ -29,18 +27,9 @@ GhostlyMenu.prototype = {
 		this.title = this.menu[0];
 		this.body = this.menu[1];
 
-		cleanWhitespace(this.body).firstChild.className = 'first';
-
-		if (/MSIE/i.test(navigator.userAgent)) {
-			var readers = getElementsByClassName('reader', 'a', this.body);
-			for (var i = 0; i < readers.length; i++) {
-				setStyle(readers[i], 'cursor', 'hand');
-			}
-		}
+		cleanWhitespace(this.body).lastChild.getElementsByTagName('a')[0].className += ' last';
 
 		setStyle(this.body, 'visibility', 'hidden');
-		setStyle(this.body, 'position', 'absolute');
-		setStyle(this.body, 'overflow', 'hidden');
 		setStyle(this.body, 'display', 'block');
 
 		addListener(this.obj, 'mouseover', bind(this, this.activate), false);
@@ -48,63 +37,43 @@ GhostlyMenu.prototype = {
 	},
 
 	activate: function() {
-		var pos = cumulativeOffset(this.title);
-		var left = pos[0];
-		if (this.align == 'right') {
-			var offset = getWidth(this.title) - getWidth(this.body) + this.offset;
-			left += offset;
+		if(this.sub == 1) {
+			var pos = currentOffset(this.title);
+			var top = pos[1] - 1;
+			var left = getWidth(this.body) - 2;
+			if (this.align == 'right') {
+			var left = getWidth(this.body) * (-1);
+			}
+		} else {
+			var pos = cumulativeOffset(this.title);
+			var top = pos[1] + getHeight(this.title);
+			var left = pos[0];
+			if (this.align == 'right') {
+				var offset = getWidth(this.title) - getWidth(this.body);
+				left += offset;
+			}
 		}
-		var top = pos[1] + getHeight(this.title);
+
+		if(getStyle(this.body, 'visibility') == 'hidden') {
+			this.title.className += ' current';
+		}
 
 		setStyle(this.body, 'left', left + 'px');
 		setStyle(this.body, 'top', top + 'px');
 		setStyle(this.body, 'visibility', 'visible');
-		setStyle(this.body, 'opacity', this.opacity);
-		setStyle(this.body, 'MozOpacity', this.opacity);
-		setStyle(this.body, 'KhtmlOpacity', this.opacity);
-		setStyle(this.body, 'filter', 'alpha(opacity=' + this.opacity * 100 + ')');
 
 		if(this.tid) {
 			clearTimeout(this.tid);
 		}
-		this.tid = setInterval(bind(this, this.appear), 30);
 	},
 
 	deactivate: function(){
 		if(this.tid) {
 			clearTimeout(this.tid);
 		}
-		this.tid = setInterval(bind(this, this.fade), 30);
-	},
-
-	appear: function() {
-		this.opacity += 0.1;
-		if(this.opacity >= this.maxopacity) {
-			this.opacity = this.maxopacity;
-			clearTimeout(this.tid);
-		}
-		setStyle(this.body, 'opacity', this.opacity);
-		setStyle(this.body, 'MozOpacity', this.opacity);
-		setStyle(this.body, 'KhtmlOpacity', this.opacity);
-		setStyle(this.body, 'filter', 'alpha(opacity=' + this.opacity * 100 + ')');
-	},
-
-	fade:function() {
-		this.opacity -= 0.1;
-		if(this.opacity <= 0) {
-			this.opacity = 0;
-			setStyle(this.body, 'visibility', 'hidden');
-			clearTimeout(this.tid);
-		}
-		setStyle(this.body, 'opacity', this.opacity);
-		setStyle(this.body, 'MozOpacity', this.opacity);
-		setStyle(this.body, 'KhtmlOpacity', this.opacity);
-		setStyle(this.body, 'filter', 'alpha(opacity=' + this.opacity * 100 + ')');
+		setStyle(this.body, 'visibility', 'hidden');
+		this.title.className = this.title.className.replace('current', '');
 	}
-}
-
-$ = function(id) {
-	return document.getElementById(id);
 }
 
 $A = function(iterable) {
@@ -122,32 +91,12 @@ $A = function(iterable) {
 	}
 }
 
-getElementsByClassName = function(className, tag, parent) {
-	parent = parent || document;
-
-	var allTags = (tag == '*' && parent.all) ? parent.all : parent.getElementsByTagName(tag);
-	var matchingElements = new Array();
-
-	className = className.replace(/\-/g, '\\-');
-	var regex = new RegExp('(^|\\s)' + className + '(\\s|$)');
-
-	var element;
-	for (var i = 0; i < allTags.length; i++) {
-		element = allTags[i];
-		if (regex.test(element.className)) {
-			matchingElements.push(element);
-		}
-	}
-
-	return matchingElements;
-}
-
 bind = function() {
 	var array = this.$A(arguments);
 	var func = array[array.length - 1];
-	var _method = func, args = array, object = args.shift();
+	var method = func, args = array, object = args.shift();
 	return function() {
-		return _method.apply(object, args.concat(array));
+		return method.apply(object, args.concat(array));
 	}
 }
 
@@ -179,6 +128,12 @@ cleanWhitespace = function(list) {
 	return list;
 }
 
+currentOffset = function(element) {
+	var valueT = element.offsetTop  || 0;
+	var valueL = element.offsetLeft || 0;
+	return [valueL, valueT];
+}
+
 cumulativeOffset = function(element) {
 	var valueT = 0, valueL = 0;
 	do {
@@ -198,21 +153,39 @@ addListener = function(element, name, observer, useCapture) {
 }
 
 function loadMenus() {
-	var subscribe = $('subscribe');
-	new GhostlyMenu(subscribe, 'left', 1, 1);
+	var align = 'left';
+	for(var i = 0; (a = document.getElementsByTagName('link')[i]); i++) {
+		if((a.getAttribute('rel') == 'stylesheet') && (a.getAttribute('href').indexOf('rtl.css') != -1)) {
+			align = 'right';
+		}
+	}
 
-	var menubar = $('menus');
-	var list = cleanWhitespace(menubar.childNodes);
-	for (var i = 0; i < list.length; i++) {
-		new GhostlyMenu(list[i], 'left', 1, 1);
+	var subscribe = document.getElementById('subscribe');
+	if (subscribe) {
+		new GhostlyMenu(subscribe, align);
+	}
+
+	var menubar = document.getElementById('menus');
+	if (menubar) {
+		var list = menubar.getElementsByTagName('ul');
+		for (var i = 0; i < list.length; i++) {
+			var menu = list[i].parentNode;
+			if(menu.parentNode === menubar) {
+				new GhostlyMenu(menu, align);
+			} else {
+				new GhostlyMenu(menu, align, 1);
+				menu.firstChild.className += ' subtitle';
+			}
+		}
 	}
 }
+
 if (document.addEventListener) {
 	document.addEventListener("DOMContentLoaded", loadMenus, false);
 
 } else if (/MSIE/i.test(navigator.userAgent)) {
 	document.write('<script id="__ie_onload_for_inove" defer src="javascript:void(0)"></script>');
-	var script = $('__ie_onload_for_inove');
+	var script = document.getElementById('__ie_onload_for_inove');
 	script.onreadystatechange = function() {
 		if (this.readyState == 'complete') {
 			loadMenus();
