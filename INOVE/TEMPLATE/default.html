@@ -227,8 +227,10 @@ catch(e){};
 </script>
 <script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/util.js"></script> 
 <script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/menu.js"></script>
+<!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
 <!-- Define the div tag where the gadget will be inserted. -->
-<div id="div-8187853656066283054"></div>
+<div id="div-4340815594697113169"></div>
 <!-- Render the gadget into a div. -->
 <script type="text/javascript">
 var skin = {};
@@ -244,15 +246,16 @@ skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
 skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
 skin['CONTENT_HEADLINE_COLOR'] = '#333333';
 skin['POSITION'] = 'bottom';
-skin['DEFAULT_COMMENT_TEXT'] = '- Say whatever you want about my blog -';
+skin['DEFAULT_COMMENT_TEXT'] = '- add your comment here -';
 skin['HEADER_TEXT'] = 'Comments';
 google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
 google.friendconnect.container.renderSocialBar(
- { id: 'div-8187853656066283054',
+ { id: 'div-4340815594697113169',
    site: '17893568565996065947',
    'view-params':{"scope":"SITE","features":"video,comment","showWall":"true"}
  },
   skin);
 </script>
+
 </body>
 </html>
