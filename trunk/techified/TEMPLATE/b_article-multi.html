@@ -1,0 +1,22 @@
+﻿<div class="fullbox" id="post cate<#article/category/id#> auth<#article/author/id#>">
+	<h3><a><#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#></a></h3>
+    <div class="fullbox_content">
+    	<h1><a href="<#article/url#>"><#article/title#></a></h1>
+    	<div class="post_info">
+            <div class="post_info_left">
+                CATE: 
+                <#article/category/name#>
+                 | 
+                TAGS: <#template:article_tag#>
+            </div>
+            <div class="post_info_right">
+            	Views <span id="spn<#article/id#>"></span><script language="JavaScript" type="text/javascript">strBatchView+="spn<#article/id#>=<#article/id#>,"</script>
+            </div>
+        </div>
+    	<div class="post_content">
+        	<#article/intro#>
+            <p><a href="<#article/url#>" class="more-link">READ THE FULL ARTICLE >></a></p>
+        </div>
+    </div>
+    <div class="fullbox_footer"></div>
+</div>
