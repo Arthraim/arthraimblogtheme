@@ -3,7 +3,7 @@
 	<id>techified</id>
 	<name>techified</name>
 	<url>http://www.arthraim.cn/</url>
-	<note>一款移植自WP的主题，techified，请保留页底的版权相关信息。Arthraim自用主题。</note>
+	<note>移植自WP，Arthraim自用。</note>
 	<author>
 		<name>Arthur Wang</name>
 		<url>http://www.arthraim.cn</url>
@@ -23,8 +23,8 @@
 		<level></level>
 	</plugin>
 	<adapted>Z-Blog 1.8</adapted>
-	<version>1.1.1</version>
-	<pubdate>2008-12-8</pubdate>
-	<modified>2008-12-8</modified>
-	<description><![CDATA[一款移植自WP的主题，techified，请保留页底的版权相关信息。Arthraim自用主题。]]></description>
+	<version>0.8.0</version>
+	<pubdate>2009-7-22</pubdate>
+	<modified>2009-7-22</modified>
+	<description><![CDATA[移植自WP，Arthraim自用]]></description>
 </theme>
