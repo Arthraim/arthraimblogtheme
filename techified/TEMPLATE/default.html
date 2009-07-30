@@ -122,133 +122,142 @@
             
             	<div class="box">
                 	<h3>Google Account</h3>
-                    <div class="box_content">
-	                    <!-- Include the Google Friend Connect javascript library. -->
+					<div class="box_content">
+						<!-- Include the Google Friend Connect javascript library. -->
 						<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
-                        <!-- Define the div tag where the gadget will be inserted. -->
-                        <div id="div-8311795522113953423" style="width:300px;border:1px solid #ffffff;"></div>
-                        <!-- Render the gadget into a div. -->
-                        <script type="text/javascript">
-                        var skin = {};
-                        skin['BORDER_COLOR'] = '#ffffff';
-                        skin['ENDCAP_BG_COLOR'] = '#ffffff';
-                        skin['ENDCAP_TEXT_COLOR'] = '#333333';
-                        skin['ENDCAP_LINK_COLOR'] = '#046380';
-                        skin['ALTERNATE_BG_COLOR'] = '#ffffff';
-                        skin['CONTENT_BG_COLOR'] = '#ffffff';
-                        skin['CONTENT_LINK_COLOR'] = '#046380';
-                        skin['CONTENT_TEXT_COLOR'] = '#333333';
-                        skin['CONTENT_SECONDARY_LINK_COLOR'] = '#006600';
-                        skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
-                        skin['CONTENT_HEADLINE_COLOR'] = '#333333';
-                        skin['ALIGNMENT'] = 'center';
-                        google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
-                        google.friendconnect.container.renderSignInGadget(
-                         { id: 'div-8311795522113953423',
-                           site: '17893568565996065947' },
-                          skin);
-                        </script>
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+						<!-- Define the div tag where the gadget will be inserted. -->
+						<div id="div-8311795522113953423" style="width:300px;border:1px solid #ffffff;"></div>
+						<!-- Render the gadget into a div. -->
+						<script type="text/javascript">
+						var skin = {};
+						skin['BORDER_COLOR'] = '#ffffff';
+						skin['ENDCAP_BG_COLOR'] = '#ffffff';
+						skin['ENDCAP_TEXT_COLOR'] = '#333333';
+						skin['ENDCAP_LINK_COLOR'] = '#046380';
+						skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+						skin['CONTENT_BG_COLOR'] = '#ffffff';
+						skin['CONTENT_LINK_COLOR'] = '#046380';
+						skin['CONTENT_TEXT_COLOR'] = '#333333';
+						skin['CONTENT_SECONDARY_LINK_COLOR'] = '#006600';
+						skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+						skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+						skin['ALIGNMENT'] = 'center';
+						google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+						google.friendconnect.container.renderSignInGadget(
+						 { id: 'div-8311795522113953423',
+						   site: '17893568565996065947' },
+						  skin);
+						</script>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             	<div class="box">
-                	<h3>About</h3>
-                    <div class="box_content">
-	                    "add it later"
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+                	<h3>Biography</h3>
+					<div class="box_content">
+						"add it later"
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             	<div class="box">
                 	<h3>Calerdar</h3>
-                    <div class="box_content">
-	                    "add it later"
+					<div class="box_content">
+						"add it later"
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				
+            	<div class="box">
+                	<h3>Twitter</h3>
+					<div id="twitter_content">
+						<ul id="twitter_update_list"></ul>
+                        <a href="https://twitter.com/arthraim">follow me on twitter »</a>
                     </div>
-                    <div class="box_bottom"></div>
-                </div>
+					<div class="box_bottom"></div>
+				</div>
                 
             	<div class="box">
-                    <h3>Google Reader Shared</h3>
-                    <div class="box_content">
+					<h3>Google Reader Shared</h3>
+					<div class="box_content">
 						<script type="text/javascript" src="http://www.google.com/reader/ui/publisher-en.js"></script>
-                        <script type="text/javascript" src="http://www.google.com/reader/public/javascript/user/06386853347241470472/state/com.google/broadcast?n=10&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22Google%20Raeder%20Shared%22%2Cs%3A%22false%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+						<script type="text/javascript" src="http://www.google.com/reader/public/javascript/user/06386853347241470472/state/com.google/broadcast?n=10&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22Google%20Raeder%20Shared%22%2Cs%3A%22false%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             </div>
         	<!-- sidebar_left -->
         	<div id="sidebar_left">
             
             	<div class="box">
-                	<h3>Blog Roll</h3>
-                    <div class="box_content">
-                        <ul>
-                        	<#CACHE_INCLUDE_LINK#>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+					<h3>Blog Roll</h3>
+					<div class="box_content">
+						<ul>
+							<#CACHE_INCLUDE_LINK#>
+						</ul>                    
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             	<div class="box">
-                	<h3>Websites</h3>
-                    <div class="box_content">
-                        <ul>
-                        	<#CACHE_INCLUDE_FAVORITE#>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+					<h3>Websites</h3>
+					<div class="box_content">
+						<ul>
+							<#CACHE_INCLUDE_FAVORITE#>
+						</ul>                    
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             </div>
         	<!-- sidebar_right -->
         	<div id="sidebar_right">
             
-            	<div class="box">
-                	<h3>Categories</h3>
-                    <div class="box_content">
-                        <ul>
-                        	<#CACHE_INCLUDE_CATALOG#>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
-                
-            	<div class="box">
-                	<h3>Archives</h3>
-                    <div class="box_content">
-                        <ul>
-                        	<#CACHE_INCLUDE_ARCHIVES#>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
-                
-            	<div class="box">
-                	<h3>Meta</h3>
-                    <div class="box_content">
-                        <ul>
-                            <li><a href="cmd.asp?act=login">[<#ZC_MSG009#>]</a></li>
-                            <li><a href="cmd.asp?act=vrs">[<#ZC_MSG021#>]</a></li>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
-                
-            	<div class="box">
-                	<h3>Misc</h3>
-                    <div class="box_content">
-                        <ul>
-                        	<#CACHE_INCLUDE_MISC#>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+				<div class="box">
+					<h3>Categories</h3>
+					<div class="box_content">
+						<ul>
+							<#CACHE_INCLUDE_CATALOG#>
+						</ul>                    
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				
+				<div class="box">
+					<h3>Archives</h3>
+					<div class="box_content">
+						<ul>
+							<#CACHE_INCLUDE_ARCHIVES#>
+						</ul>                    
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				
+				<div class="box">
+					<h3>Meta</h3>
+					<div class="box_content">
+						<ul>
+							<li><a href="cmd.asp?act=login">[<#ZC_MSG009#>]</a></li>
+							<li><a href="cmd.asp?act=vrs">[<#ZC_MSG021#>]</a></li>
+						</ul>                    
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				
+				<div class="box">
+					<h3>Misc</h3>
+					<div class="box_content">
+						<ul>
+							<#CACHE_INCLUDE_MISC#>
+						</ul>                    
+					</div>
+					<div class="box_bottom"></div>
+				</div>
 
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- content_area END -->
 
@@ -319,6 +328,8 @@ try{
 catch(e){};
 });
 </script>
+<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/twitter.js"></script>
+<script type="text/javascript" src="http://168.143.161.20/statuses/user_timeline/arthraim.json?callback=twitterCallback2&amp;count=10"></script>
 <script src="<#ZC_BLOG_HOST#>plugin/lightbox/prototype.js" type="text/javascript"></script>
 <script src="<#ZC_BLOG_HOST#>plugin/lightbox/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
 <script src="<#ZC_BLOG_HOST#>plugin/lightbox/lightbox.js" type="text/javascript"></script>
