@@ -39,7 +39,7 @@
 	<div id="top_area_content">
     	<div class="left">
         	<ul>
-                <li><a>HOME</a></li>
+                <li></li>
             </ul>
         </div>
         <div class="right">
@@ -56,9 +56,12 @@
 <div id="header">
 	<div id="header_content">
     	<div id="logo">
-        	<h1><a href="<#ZC_BLOG_HOST#>"><#ZC_BLOG_NAME#></a></h1>
-            <h2><#ZC_BLOG_SUB_NAME#></h2>
-        </div>
+			<!--
+				<h1><a href="<#ZC_BLOG_HOST#>"><#ZC_BLOG_NAME#></a></h1>
+				<h2><#ZC_BLOG_SUB_NAME#></h2>
+            -->
+			<a href="http://arthraim.cn/"><img src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/arthraim_logo.png"/></a>
+		</div>
         <div id="search_box">
             <form method="post" action="<#ZC_BLOG_HOST#>cmd.asp?act=Search">
                 <input type="text" name="edtSearch" id="edtSearch" size="20" value="Search" onblur="if(this.value=='') this.value='Search';" onfocus="if(this.value=='Search') this.value='';"/>
@@ -129,29 +132,44 @@
                 </div>
                 
             	<div class="box">
-                	<h3>About</h3>
-                    <div class="box_content">
-	                    "add it later"
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+                	<h3>Biography</h3>
+					<div class="box_content">
+						<img align="left" alt="" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/avator.png" />
+                        <p><strong>Arthur Wang</strong><br />
+                        中国 杭州/嘉兴<br />
+                        一个做自己爱做的事情的小小程序员。<br />
+                        网名 Arthraim，源于自己的名字Arthur以及双胞胎弟弟的名字Ephraim的蒙太奇。</p>
+                        <p style="text-align: center; "><a target="_blank" href="http://arthraim@gmail.com"><img alt="" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/Arthraim_Gmail.png" /></a>
+                        <a target="_blank" href="https://twitter.com/arthraim"><img alt="" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/Arthraim_twitter.png" /></a></p>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             	<div class="box">
                 	<h3>Calerdar</h3>
-                    <div class="box_content">
-	                    "add it later"
+					<div id="calendar_content">
+						<div><#CACHE_INCLUDE_CALENDAR_NOW#></div>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				
+            	<div class="box">
+                	<h3>Twitter</h3>
+					<div id="twitter_content">
+						<ul id="twitter_update_list"></ul>
+                        <a href="https://twitter.com/arthraim">follow me on twitter »</a>
                     </div>
-                    <div class="box_bottom"></div>
-                </div>
+					<div class="box_bottom"></div>
+				</div>
                 
             	<div class="box">
-                    <h3>Google Reader Shared</h3>
-                    <div class="box_content">
+					<h3>Google Reader Shared</h3>
+					<div class="box_content">
 						<script type="text/javascript" src="http://www.google.com/reader/ui/publisher-en.js"></script>
-                        <script type="text/javascript" src="http://www.google.com/reader/public/javascript/user/06386853347241470472/state/com.google/broadcast?n=10&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22Google%20Raeder%20Shared%22%2Cs%3A%22false%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
+						<script type="text/javascript" src="http://www.google.com/reader/public/javascript/user/06386853347241470472/state/com.google/broadcast?n=10&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22Google%20Raeder%20Shared%22%2Cs%3A%22false%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
                 
             </div>
         	<!-- sidebar_left -->
@@ -295,6 +313,8 @@ try{
 catch(e){};
 });
 </script>
+<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/twitter.js"></script>
+<script type="text/javascript" src="http://168.143.161.20/statuses/user_timeline/arthraim.json?callback=twitterCallback2&amp;count=10"></script>
 <script src="<#ZC_BLOG_HOST#>plugin/lightbox/prototype.js" type="text/javascript"></script>
 <script src="<#ZC_BLOG_HOST#>plugin/lightbox/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
 <script src="<#ZC_BLOG_HOST#>plugin/lightbox/lightbox.js" type="text/javascript"></script>
