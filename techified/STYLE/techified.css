@@ -1128,10 +1128,16 @@ code {
 /****************/
 /* Arthur Added */
 /****************/
-img { border:none; }
-span.feed-icon{display:none;}
-div.reader-publisher-module h3{display:none;}
-/*twitter*/
+img { 
+	border:none; 
+}
+span.feed-icon{
+	display:none;
+}
+div.reader-publisher-module h3{
+	display:none;
+}
+/*****twitter*****/
 #twitter_content {
 	font-size: 12px;
 	padding: 10px 10px 5px 10px;
@@ -1162,4 +1168,72 @@ div.reader-publisher-module h3{display:none;}
 #twitter_update_list li a:active, 
 #twitter_update_list li a:focus{
 	text-decoration: underline;
+}
+/*****calendar*****/
+#calendar_content {
+	font-size: 12px;
+	padding: 10px 10px 5px 10px;
+	overflow: hidden;
+	color: #666;
+}
+#calendar_content a{
+	color: #046380;
+	text-decoration: none;
+}
+#calendar_content a:hover, 
+#calendar_content a:active, 
+#calendar_content a:focus,
+#calendar_content a:hover, 
+#calendar_content a:active, 
+#calendar_content a:focus{
+	text-decoration: underline;
+}
+p.y{/*Title Year-month-day*/
+	text-align:center;
+	margin:2px 0 0 0;
+	padding:0 0 0 0;
+	float:left;
+	width:98%;
+	font-size:13px;
+	font-weight:bold;
+	background: url(images/dot.gif) repeat-x bottom;
+}
+p.w{/*week day*/
+	float:left;
+	margin:2px 0 0 0;
+	width:14%;
+	text-align:center;
+	vertical-align :middle;
+	font-weight:bold;
+}
+p.d{/*day*/
+	float:left;
+	margin:2px 0 0 0;
+	width:14%;
+	text-align:center;
+	vertical-align :middle;
+	border:#000000;
+}
+p.yd{/*written day*/
+	float:left;
+	margin:2px 0 0 0;
+	width:14%;
+	text-align:center;
+	vertical-align :middle;
+	color:#6090c0;
+	font-weight : bold;
+}
+p.nd{/*no date*/
+	float:left;
+	margin:2px 0 0 0;
+	width:14%;
+	text-align:center;
+	vertical-align :middle;
+}
+p.cd{
+	float:left;
+	margin:2px 0 0 0;
+	width:14%;
+	text-align:center;
+	vertical-align :middle;
 }
