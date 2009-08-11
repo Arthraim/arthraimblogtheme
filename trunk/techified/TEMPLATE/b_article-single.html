@@ -1,4 +1,24 @@
-﻿<div class="fullbox" id="post cate<#article/category/id#> auth<#article/author/id#>">
+﻿<!--[if IE 6]>
+<div class="fullbox" id="ie6update">
+	<h3><a>Suggest:</a></h3>
+	<div class="fullbox_content">
+		<div class="post_content">
+			<p><span style="color: rgb(255, 0, 0); ">您好，欢迎您访问Arthraim.cn，您使用的浏览器为版本较旧的Internet Explorer 6。<br />
+			从标题LOGO以及其他可能出现的差异来看，IE6对于网站的支持已经无法满足Internet日新月异的变化了。</br>
+			为了使您得到更快、更完整的体验，推荐您使用其他的浏览器，请根据需求选择下方合适的浏览器。</span></p>
+				<a href="http://www.google.com/chrome" target="_blank"><img width="80" height="80" title="Google Chrome" alt="" src="http://arthraim.cn/upload/Browsers_1.png" /></a>
+				<a href="http://www.mozillaonline.com/" target="_blank"><img width="80" height="80" title="Firefox" alt="" src="http://arthraim.cn/upload/Browsers_2.png" /></a>
+				<a href="http://www.microsoft.com/china/windows/default.aspx" target="_blank"><img width="80" height="80" title="Internet Explorer 8" alt="" src="http://arthraim.cn/upload/Browsers_3.png" /></a>
+				<a href="http://www.maxthon.cn/" target="_blank"><img width="80" height="80" title="Maxthon 2" alt="" src="http://arthraim.cn/upload/Browsers_4.png" /></a>
+				<a href="http://www.opera.com/" target="_blank"><img width="80" height="80" title="Opera 9" alt="" src="http://arthraim.cn/upload/Browsers_5.png" /></a>
+				<a href="http://www.apple.com.cn/Safari/" target="_blank"><img width="80" height="80" title="Safari 4" alt="" src="http://arthraim.cn/upload/Browsers_6.png" /></a>
+			</p>
+		</div>
+	</div>
+	<div class="fullbox_footer"></div>
+</div>
+<![endif]-->
+<div class="fullbox" id="post cate<#article/category/id#> auth<#article/author/id#>">
 	<div class="fullbox_header"></div>
 	<div class="fullbox_content">
     	<div class="breadcrumb">
@@ -6,27 +26,29 @@
             <div style="float:right"><#template:article_navbar_r#></div>
         </div>
     	<div class="breadcrumb"></div>
-        <h1><a href="<#article/url#>"><#article/title#></a></h1>
-        <div class="post_info">
-            <div class="post_info_left">
-            <#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#>
-            </div>
-            <div class="post_info_right">
-            	views <span id="spn<#article/id#>"></span>
-                <script language="JavaScript" type="text/javascript">strBatchCount+="spn<#article/id#>=<#article/id#>,"</script>
-            </div>
-        </div>
-        <div class="post_content">
-            <#article/content#>
-            <p>
-                任何形式的转载，请注明本文由<#article/author/name#>发表于<a href="http://arthraim.cn/">Arthraim.cn</a>
-                <br />
-                引用链接: <a href="<#article/trackback_url#>"><#article/trackback_url#></a>
-            </p>
-        </div>
-        <div class="post_tags">
-        	Tagged with: <#template:article_tag#>
-        </div>
+		<h1><a href="<#article/url#>"><#article/title#></a></h1>
+		<div class="post_info">
+			<div class="post_info_left">
+				<#article/posttime/monthname#> <#article/posttime/day#>, <#article/posttime/year#>
+				 | CATE: 
+				<a href="<#article/category/url#>"><#article/category/name#></a>
+				 | TAGS: <#template:article_tag#>
+			</div>
+			<div class="post_info_right">
+				views <span id="spn<#article/id#>"></span>
+				<script language="JavaScript" type="text/javascript">strBatchCount+="spn<#article/id#>=<#article/id#>,"</script>
+			</div>
+		</div>
+		<div class="post_content">
+			<#article/content#>
+		</div>
+		<div class="post_tags">
+			<p>
+				任何形式的转载，请注明本文由<#article/author/name#>发表于<a href="http://arthraim.cn/">Arthraim.cn</a>
+				<br />
+				引用链接: <a href="<#article/trackback_url#>"><#article/trackback_url#></a>
+			</p>
+		</div>
     </div>
 	<div class="fullbox_footer"></div>
 </div>
