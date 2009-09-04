@@ -1,15 +1,15 @@
-function twitterCallback2(twitters) {
+function renseaCallback(statuss) {
   var statusHTML = [];
-  for (var i=0; i<twitters.length; i++){
-    var username = twitters[i].user.screen_name;
-    var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
+  for (var i=0; i<statuss.length; i++){
+    var username = statuss[i].user.screen_name;
+    var status = statuss[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
       return '<a href="'+url+'">'+url+'</a>';
     }).replace(/\B@([_a-z0-9]+)/ig, function(reply) {
-      return  reply.charAt(0)+'<a href="http://168.143.161.20/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+      return  reply.charAt(0)+'<a href="http://rensea.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
     });
-    statusHTML.push('<li><span>'+status+'</span> <a style="font-size:85%" href="http://168.143.161.20/'+username+'/statuses/'+twitters[i].id+'">'+relative_time(twitters[i].created_at)+'</a></li>');
+    statusHTML.push('<li><span>'+status+'</span> <a style="font-size:85%" href="http://rensea.com/'+username+'/statuses/'+statuss[i].id+'">'+relative_time(statuss[i].created_at)+'</a></li>');
   }
-  document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
+  document.getElementById('rensea_update_list').innerHTML = statusHTML.join('');
 }
 
 function relative_time(time_value) {
