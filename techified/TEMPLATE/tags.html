@@ -38,7 +38,7 @@
 	<div id="top_area_content">
     	<div class="left">
         	<ul>
-                <li></li>
+                <#CACHE_INCLUDE_NAVBAR#>
             </ul>
         </div>
         <div class="right">
@@ -73,7 +73,7 @@
 <!-- navigation_area START -->
 <div id="navigation_area">
     <ul id="nav">
-        <#CACHE_INCLUDE_NAVBAR#>
+        <#CACHE_INCLUDE_FAVORITE#>
     </ul>
 </div>
 <!-- navigation_area END -->
@@ -138,7 +138,7 @@
 						<img align="left" alt="" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/avator.png" />
                         <p><strong>Arthur Wang</strong><br />
                         中国 杭州/嘉兴<br />
-                        一个做自己爱做的事情的小小程序员。<br />
+                        一个做自己喜欢做的事情的小小程序员。<br />
                         网名 Arthraim，源于自己的名字Arthur以及双胞胎弟弟的名字Ephraim的蒙太奇。</p>
                         <p style="text-align: center; "><a target="_blank" href="http://arthraim@gmail.com"><img alt="" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/Arthraim_Gmail.png" /></a>
                         <a target="_blank" href="https://twitter.com/arthraim"><img alt="" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/style/images/Arthraim_twitter.png" /></a></p>
@@ -181,16 +181,6 @@
                     <div class="box_content">
                         <ul>
                         	<#CACHE_INCLUDE_LINK#>
-                        </ul>                    
-                    </div>
-                    <div class="box_bottom"></div>
-                </div>
-                
-            	<div class="box">
-                	<h3>Websites</h3>
-                    <div class="box_content">
-                        <ul>
-                        	<#CACHE_INCLUDE_FAVORITE#>
                         </ul>                    
                     </div>
                     <div class="box_bottom"></div>
@@ -316,8 +306,8 @@ catch(e){};
 
 });
 </script>
-<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/twitter.js"></script>
-<script type="text/javascript" src="http://168.143.161.20/statuses/user_timeline/arthraim.json?callback=twitterCallback2&amp;count=10"></script>
+<!--<script language="javascript" src="<#ZC_BLOG_HOST#>themes/<#ZC_BLOG_THEME#>/SCRIPT/twitter.js"></script>
+<script type="text/javascript" src="http://168.143.161.20/statuses/user_timeline/arthraim.json?callback=twitterCallback2&amp;count=10"></script>-->
 </body>
 </html>
 <!-- <#BLOG_CREATE_TIME#> -->
