@@ -1137,38 +1137,46 @@ span.feed-icon{
 div.reader-publisher-module h3{
 	display:none;
 }
-/*****twitter*****/
-#twitter_content {
+/*****microblogging widget(twitter or others)*****/
+#microblog_content {
 	font-size: 12px;
 	padding: 10px 10px 5px 10px;
 	overflow: hidden;
 	color: #666;
 }
-#twitter_update_list {
+#microblog_content a {
+	color: #046380;
+}
+#microblog_list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: inline;
 }
-#twitter_update_list li {
+#microblog_list li {
 	display:block;
 	background: none;
 	margin: 0;
 	padding: 4px 0 6px;
 	background: url(images/dot.gif) repeat-x bottom;
 }
-#twitter_update_list li a{
+#microblog_list li a{
 	color: #046380;
 	text-decoration: none;
 }
-#twitter_update_list li a:hover, 
-#twitter_update_list li a:active, 
-#twitter_update_list li a:focus,
-#twitter_update_list li a:hover, 
-#twitter_update_list li a:active, 
-#twitter_update_list li a:focus{
+#microblog_list li a:hover, 
+#microblog_list li a:active, 
+#microblog_list li a:focus,
+#microblog_list li a:hover, 
+#microblog_list li a:active, 
+#microblog_list li a:focus{
 	text-decoration: underline;
 }
+#microblog_list .timeAndWay{
+	color: #acacac;
+}
+
+
 /*****calendar*****/
 #calendar_content {
 	font-size: 12px;
