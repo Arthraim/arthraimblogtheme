@@ -1,4 +1,4 @@
-﻿/*
+/*
 Author: Arthraim
 Version: 0.2
 Update: 2009/9/21
@@ -21,7 +21,7 @@ function renseaCallback2(statuss) {
 		if(statuss[i].status_type == "PICTURE"){
 			sHtml += "<a href='" + statuss[i].original_url + "' rel='lightbox'>图片</a>";
 		}
-		sHtml += ' </div>';
+		sHtml += '</div>';
 		sHtml += '<div class="timeAndWay">';
 		sHtml += statuss[i].relative_date + " 通过" + (statuss[i].source=="网站"?"人间网":statuss[i].source);
 		sHtml += '</div>';
