@@ -19,7 +19,7 @@ function renseaCallback2(statuss) {
 			sHtml += "<a href='" + statuss[i].link_url + "' target='_blank'>" + (statuss[i].link_title||statuss[i].link_desc) + "</a>";
 		}
 		if(statuss[i].status_type == "PICTURE"){
-			sHtml += "<a href='" + statuss[i].original_url + "' target='_blank'>图片</a>";
+			sHtml += "<a href='" + statuss[i].original_url + "' rel='lightbox'>图片</a>";
 		}
 		sHtml += ' </div>';
 		sHtml += '<div class="timeAndWay">';
