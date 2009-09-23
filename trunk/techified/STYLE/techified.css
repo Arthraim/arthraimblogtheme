@@ -1245,3 +1245,11 @@ p.cd{
 	text-align:center;
 	vertical-align :middle;
 }
+
+/*****Reader Shared Items*****/
+#readerpublishermodule0 .f{
+	float: right;
+}
+#readerpublishermodule0 a{
+	color: #046380;
+}
