@@ -17,7 +17,8 @@ function renseaCallback2(statuss) {
 		}
 		if(statuss[i].status_type == "LINK"){
 			sHtml += "<a href='" + statuss[i].original_url + "' target='_blank'>" + (statuss[i].link_title||statuss[i].link_desc) + "</a>";
-			sHtml += "   <a href='" + statuss[i].thumbnail + "' rel='lightbox'>[查看缩略图]</a>";
+			if(statuss[i].thumbnail)
+				sHtml += "   <a href='" + statuss[i].thumbnail + "' rel='lightbox'>[查看缩略图]</a>";
 		}
 		if(statuss[i].status_type == "PICTURE"){
 			sHtml += "   <a href='" + statuss[i].original_url + "' rel='lightbox'>[查看图片]</a>";
