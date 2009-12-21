@@ -12,7 +12,7 @@ function renseaCallback2(statuss) {
 		sHtml = '<li>';
 		sHtml += '<div class="text">';
 		if(statuss[i].text){
-			sHtml += statuss[i].text.replace(/@(.+?)(?=\s)/g, "@<a href='http://rensea.com/$1' target='_blank'>$1</a>");
+			sHtml += statuss[i].text.replace(/@(.+?)(?=\s)/g, "@<a href='http://api.renjian.com/$1' target='_blank'>$1</a>");
             sHtml += " ";
 		}
 		if(statuss[i].status_type == "LINK"){
