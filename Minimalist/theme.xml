@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<theme version="0.1">
+<id>Minimalist</id>
+<name>Minimalist</name>
+<url></url>
+<note>Wordpress的Minimalist移植版</note>
+<author>
+<name>Arthraim</name>
+<url>http://arthraim.com/</url>
+<email>arthraim@gmail.com</email>
+</author>
+<source>
+<name>techdesigns</name>
+<url>http://www.techdesigns.co.uk/</url>
+<email>null@null.com</email>
+</source>
+<plugin>
+<name></name>
+<note></note>
+<type></type>
+<path></path>
+<include></include>
+<level></level>
+</plugin>
+<adapted>Z-Blog 1.8</adapted>
+<version>1.0</version>
+<pubdate>2010-1-20</pubdate>
+<modified>2007-7-15</modified>
+<description><![CDATA[Minimalist是一个相当袖珍有特点的主题，并有5种颜色可供选择]]></description>
+</theme>
